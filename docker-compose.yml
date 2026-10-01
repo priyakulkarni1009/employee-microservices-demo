@@ -1,0 +1,20 @@
+services:
+  employee-db:
+    image: postgres:17
+    container_name: employee-db
+    environment:
+      POSTGRES_DB: employees
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+  department-db:
+    image: postgres:17
+    container_name: department-db
+    environment:
+      POSTGRES_DB: departments
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
